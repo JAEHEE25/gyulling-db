@@ -10,7 +10,3 @@ configMapGenerator:
   - name: init-db
     files:
       - configs/init.sql
-secretGenerator:
-- name: database-creds
-  files:
-  - jwtKey.txt
