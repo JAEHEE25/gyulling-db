@@ -3,7 +3,7 @@ resources:
   - nginx.yaml
   - mariadb.yaml
   - backend.yaml
-  - frontend.yaml
+  # - frontend.yaml
 configMapGenerator:
   - name: nginx
     files:
@@ -11,3 +11,7 @@ configMapGenerator:
   - name: init-db
     files:
       - configs/init.sql
+secretGenerator:
+- name: database-creds
+  files:
+  - jwtKey.txt
